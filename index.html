@@ -57,6 +57,11 @@
   }
   a.card:hover { background: var(--card-hi); border-color: var(--accent); transform: translateY(-1px); }
   .card.static { opacity: .82; cursor: default; }
+  .qr {
+    width: 64px; height: 64px; flex: 0 0 64px;
+    border-radius: 10px; border: 1px solid var(--line);
+    object-fit: cover;
+  }
   .ico {
     width: 38px; height: 38px; flex: 0 0 38px; border-radius: 10px;
     background: rgba(240,150,47,.12); display: flex; align-items: center; justify-content: center;
@@ -170,6 +175,14 @@
   </a>
 
   <div class="section-title">找我</div>
+  <a class="card" href="https://t.me/SkrSG" target="_blank" rel="noopener">
+    <div class="ico">✈️</div>
+    <div class="body">
+      <div class="t">Telegram <span class="badge">@SkrSG</span></div>
+      <div class="d">t.me/SkrSG · 扫码直达</div>
+    </div>
+    <img class="qr" src="tg-qr.png" alt="Telegram QR @SkrSG">
+  </a>
   <div class="grid">
     <a class="card" href="https://x.com/0xDoNotMove" target="_blank" rel="noopener">
       <div class="ico">𝕏</div>

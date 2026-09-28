@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>東't-Move — iOS/macOS 折腾笔记</title>
+<meta name="description" content="iOS/macOS tinkerer — eSIM & remote SIM, SIP/VoIP on iPhone, 4G modules on Mac.">
+<meta property="og:title" content="東't-Move — iOS/macOS 折腾笔记">
+<meta property="og:description" content="eSIM 与远程 SIM、iPhone 上的 SIP/VoIP、4G 模块上 Mac。">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23F0962F'/><text y='72' x='50' text-anchor='middle' font-size='58' fill='%23141A20' font-family='sans-serif'>東</text></svg>">
+<style>
+  :root {
+    --bg: #0E1116;
+    --card: #161B22;
+    --card-hi: #1C232C;
+    --line: #262D36;
+    --text: #E6EDF3;
+    --muted: #8B949E;
+    --accent: #F0962F;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, system-ui, sans-serif;
+    min-height: 100vh;
+    padding: 56px 20px 64px;
+    background-image: radial-gradient(700px 400px at 50% -10%, rgba(240,150,47,.13), transparent 65%);
+  }
+  .wrap { max-width: 620px; margin: 0 auto; }
+
+  .head { text-align: center; margin-bottom: 40px; }
+  .avatar {
+    width: 96px; height: 96px; border-radius: 50%;
+    border: 2px solid var(--line);
+    object-fit: cover; display: block; margin: 0 auto 18px;
+  }
+  h1 { font-size: 26px; font-weight: 700; letter-spacing: 1px; }
+  .handle { color: var(--muted); font-size: 15px; margin-top: 6px; }
+  .tag {
+    margin-top: 16px; font-size: 15px; line-height: 1.7; color: #C9D1D9;
+  }
+  .tag em { color: var(--accent); font-style: normal; }
+
+  .section-title {
+    font-size: 12px; letter-spacing: 3px; color: var(--muted);
+    text-transform: uppercase; margin: 34px 0 14px 4px;
+  }
+
+  a.card {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+    text-decoration: none; color: var(--text);
+    transition: background .15s, border-color .15s, transform .15s;
+  }
+  a.card:hover { background: var(--card-hi); border-color: var(--accent); transform: translateY(-1px); }
+  .card.static { opacity: .82; cursor: default; }
+  .ico {
+    width: 38px; height: 38px; flex: 0 0 38px; border-radius: 10px;
+    background: rgba(240,150,47,.12); display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .body { flex: 1; min-width: 0; }
+  .t { font-size: 15px; font-weight: 600; }
+  .d { font-size: 13px; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+  .chev { color: #4A525C; font-size: 15px; }
+  .badge {
+    display: inline-block; font-size: 11px; color: var(--accent);
+    border: 1px solid rgba(240,150,47,.4); border-radius: 5px;
+    padding: 1px 6px; margin-left: 8px; vertical-align: middle;
+  }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .grid a.card { margin-bottom: 0; }
+
+  footer { text-align: center; color: #4A525C; font-size: 12px; margin-top: 44px; }
+  @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <img class="avatar" src="https://pbs.twimg.com/profile_images/2102530126592516096/40vD3_ZL_400x400.jpg" alt="東't-Move">
+    <h1>東't-Move</h1>
+    <div class="handle">@0xDoNotMove · dntmove.asia</div>
+    <p class="tag">
+      折腾 <em>iOS / macOS</em>：iPhone 上的 eSIM 与远程 SIM、<em>SIP / VoIP</em>、<br>
+      把 4G 模块塞进 Mac 当蜂窝语音网关。
+    </p>
+  </div>
+
+  <div class="section-title">在做</div>
+  <div class="card static">
+    <div class="ico">📶</div>
+    <div class="body">
+      <div class="t">simbridge <span class="badge">开发中</span></div>
+      <div class="d">远程 SIM 客户端 · iPhone 优先 · 自研 Swift SIP UA</div>
+    </div>
+  </div>
+  <a class="card" href="https://github.com/SheldonJoO/dontmove-kit" target="_blank" rel="noopener">
+    <div class="ico">📡</div>
+    <div class="body">
+      <div class="t">dontmove-kit</div>
+      <div class="d">Mac 变 4G 蜂窝语音网关（DJI 卡槽 4G 模块 + Linphone）</div>
+    </div>
+    <div class="chev">›</div>
+  </a>
+
+  <div class="section-title">开源项目</div>
+  <a class="card" href="https://github.com/SheldonJoO/cellbridge-mac" target="_blank" rel="noopener">
+    <div class="ico">🔌</div>
+    <div class="body">
+      <div class="t">cellbridge-mac</div>
+      <div class="d">QDC507 / EG25-G 4G 模块的 CellBridge SIP 网关移植</div>
+    </div>
+    <div class="chev">›</div>
+  </a>
+  <a class="card" href="https://github.com/SheldonJoO/DJiPhone-Kit" target="_blank" rel="noopener">
+    <div class="ico">🧩</div>
+    <div class="body">
+      <div class="t">DJiPhone-Kit</div>
+      <div class="d">DJI QDC507 模块 → macOS 原生通信套件</div>
+    </div>
+    <div class="chev">›</div>
+  </a>
+  <a class="card" href="https://github.com/SheldonJoO/AirCard-zh" target="_blank" rel="noopener">
+    <div class="ico">🌐</div>
+    <div class="body">
+      <div class="t">AirCard-zh <span class="badge">汉化</span></div>
+      <div class="d">AirCard 全量中文化</div>
+    </div>
+    <div class="chev">›</div>
+  </a>
+  <a class="card" href="https://github.com/SheldonJoO/SideStore-zh-Hans" target="_blank" rel="noopener">
+    <div class="ico">📱</div>
+    <div class="body">
+      <div class="t">SideStore-zh-Hans <span class="badge">汉化</span></div>
+      <div class="d">SideStore 全量中文化 · 含未签名 IPA</div>
+    </div>
+    <div class="chev">›</div>
+  </a>
+  <a class="card" href="https://github.com/SheldonJoO/AltServer-zh" target="_blank" rel="noopener">
+    <div class="ico">🛠</div>
+    <div class="body">
+      <div class="t">AltServer-zh <span class="badge">汉化</span></div>
+      <div class="d">AltServer 中文化</div>
+    </div>
+    <div class="chev">›</div>
+  </a>
+  <a class="card" href="https://github.com/SheldonJoO/x-unfollow-agent" target="_blank" rel="noopener">
+    <div class="ico">🧹</div>
+    <div class="body">
+      <div class="t">x-unfollow-agent</div>
+      <div class="d">X 关注清理：抓列表 / 活跃度体检 / 限流取关</div>
+    </div>
+    <div class="chev">›</div>
+  </a>
+
+  <div class="section-title">教程</div>
+  <a class="card" href="https://h5.kitesim.co/#/pages/login/register?invite=00U8QZ&language=zh" target="_blank" rel="noopener">
+    <div class="ico">✈️</div>
+    <div class="body">
+      <div class="t">KiteSim 注册 / 买号 / 付款 / 续费全流程</div>
+      <div class="d">$0.3 拿加拿大号 · 邀请码 00U8QZ</div>
+    </div>
+    <div class="chev">›</div>
+  </a>
+
+  <div class="section-title">找我</div>
+  <div class="grid">
+    <a class="card" href="https://x.com/0xDoNotMove" target="_blank" rel="noopener">
+      <div class="ico">𝕏</div>
+      <div class="body"><div class="t">X</div><div class="d">@0xDoNotMove</div></div>
+      <div class="chev">›</div>
+    </a>
+    <a class="card" href="https://github.com/SheldonJoO" target="_blank" rel="noopener">
+      <div class="ico">🐙</div>
+      <div class="body"><div class="t">GitHub</div><div class="d">SheldonJoO</div></div>
+      <div class="chev">›</div>
+    </a>
+  </div>
+
+  <footer>© 2026 東't-Move · dntmove.asia</footer>
+</div>
+</body>
+</html>
